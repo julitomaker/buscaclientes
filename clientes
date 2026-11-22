@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Atajo para correr buscaclientes desde cualquier carpeta: clientes <comando> ...
+set -euo pipefail
+AQUI="$(cd "$(dirname "$(readlink -f "$0" 2>/dev/null || echo "$0")")" && pwd)"
+if [ -x "$AQUI/.venv/bin/python" ]; then PY="$AQUI/.venv/bin/python"; else PY=python3; fi
+export PYTHONPATH="$AQUI:$AQUI/lib${PYTHONPATH:+:$PYTHONPATH}"
+exec "$PY" -m buscaclientes "$@"

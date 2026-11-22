@@ -1,0 +1,4 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#17141f;--ink2:#2a2536;--cream:#f7f2e9;--paper:#fffdf8;--mute:#8b8496;--line:#e6dfd2;--acc:#ff6a3d;--acc2:#ffb199;--ok:#2fbf71;--okbg:#d6f5e3;--mid:#f4c430;--midbg:#fff1c2;--low:#e9e6ef}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;color:var(--ink)}
+.mono{font-family:Menlo,monospace}

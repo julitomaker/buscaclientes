@@ -1,0 +1,459 @@
+[
+ {
+  "id": "demo-01",
+  "origen": "Google Maps",
+  "nombre": "Restaurante La Picá de Don Tito",
+  "categoria": "Restaurante",
+  "categorias": [
+   "Restaurante"
+  ],
+  "direccion": "Av. Providencia 1234, 7500000 Providencia, Región Metropolitana, Chile",
+  "ciudad": "",
+  "telefono": "+56 9 0000 1000",
+  "web": "https://lapicadetito.ejemplo.cl",
+  "maps": "",
+  "rating": 4.6,
+  "cant_resenas": 812,
+  "emails": [
+   "contacto@lapicadetito.ejemplo.cl"
+  ],
+  "instagram": "lapicadetito",
+  "facebook": "",
+  "linkedin": "",
+  "resenas": [
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Los garzones súper atentos, el salón siempre lleno"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Gran equipo de mozos, el delantal con el logo se ve bien"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Cocina rica, atención rápida en salón"
+   }
+  ],
+  "notas": "",
+  "busqueda": "demo"
+ },
+ {
+  "id": "demo-02",
+  "origen": "Google Maps",
+  "nombre": "Café Bruma",
+  "categoria": "Cafetería",
+  "categorias": [
+   "Cafetería"
+  ],
+  "direccion": "Los Leones 456, 7510000 Providencia, Región Metropolitana, Chile",
+  "ciudad": "",
+  "telefono": "+56 9 0000 1037",
+  "web": "https://cafebruma.ejemplo.cl",
+  "maps": "",
+  "rating": 4.7,
+  "cant_resenas": 389,
+  "emails": [
+   "hola@cafebruma.ejemplo.cl"
+  ],
+  "instagram": "cafebruma",
+  "facebook": "",
+  "linkedin": "",
+  "resenas": [
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "El café de especialidad es buenísimo"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Las baristas muy amables"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Lindo local para trabajar"
+   }
+  ],
+  "notas": "",
+  "busqueda": "demo"
+ },
+ {
+  "id": "demo-03",
+  "origen": "Google Maps",
+  "nombre": "Clínica Dental Sonríe Más",
+  "categoria": "Dentista",
+  "categorias": [
+   "Dentista"
+  ],
+  "direccion": "Apoquindo 3000, 7550000 Las Condes, Región Metropolitana, Chile",
+  "ciudad": "",
+  "telefono": "+56 9 0000 1074",
+  "web": "https://sonriemas.dental.ejemplo.cl",
+  "maps": "",
+  "rating": 4.8,
+  "cant_resenas": 540,
+  "emails": [
+   "recepcion@sonriemas.ejemplo.cl"
+  ],
+  "instagram": "sonriemas.dental",
+  "facebook": "",
+  "linkedin": "",
+  "resenas": [
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "La doctora y todo el equipo de la clínica muy profesionales"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Atención impecable, recepción muy ordenada"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Me hicieron el tratamiento dental sin dolor"
+   }
+  ],
+  "notas": "",
+  "busqueda": "demo"
+ },
+ {
+  "id": "demo-04",
+  "origen": "Google Maps",
+  "nombre": "CrossBox Oriente",
+  "categoria": "Gimnasio",
+  "categorias": [
+   "Gimnasio"
+  ],
+  "direccion": "Av. Las Condes 8900, 7560000 Las Condes, Región Metropolitana, Chile",
+  "ciudad": "",
+  "telefono": "+56 9 0000 1111",
+  "web": "https://crossboxoriente.ejemplo.cl",
+  "maps": "",
+  "rating": 4.5,
+  "cant_resenas": 211,
+  "emails": [],
+  "instagram": "crossboxoriente",
+  "facebook": "",
+  "linkedin": "",
+  "resenas": [
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Los entrenadores son muy buenos"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "El box es amplio, buen crossfit"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Coaches atentos a la técnica"
+   }
+  ],
+  "notas": "",
+  "busqueda": "demo"
+ },
+ {
+  "id": "demo-05",
+  "origen": "Google Maps",
+  "nombre": "Bar Patio Verde",
+  "categoria": "Bar",
+  "categorias": [
+   "Bar"
+  ],
+  "direccion": "Manuel Montt 210, 7500000 Providencia, Región Metropolitana, Chile",
+  "ciudad": "",
+  "telefono": "+56 9 0000 1148",
+  "web": "",
+  "maps": "",
+  "rating": 4.3,
+  "cant_resenas": 1290,
+  "emails": [
+   "reservas@patioverde.ejemplo.cl"
+  ],
+  "instagram": "",
+  "facebook": "",
+  "linkedin": "",
+  "resenas": [
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Buen ambiente, los garzones rápidos"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Excelente bar para after office"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Cocina hasta tarde"
+   }
+  ],
+  "notas": "",
+  "busqueda": "demo"
+ },
+ {
+  "id": "demo-06",
+  "origen": "Google Maps",
+  "nombre": "Centro Médico Kine Salud",
+  "categoria": "Centro médico",
+  "categorias": [
+   "Centro médico"
+  ],
+  "direccion": "Av. Ossa 1500, 7850000 Ñuñoa, Región Metropolitana, Chile",
+  "ciudad": "",
+  "telefono": "+56 9 0000 1185",
+  "web": "https://kinesalud.cl.ejemplo.cl",
+  "maps": "",
+  "rating": 4.6,
+  "cant_resenas": 175,
+  "emails": [],
+  "instagram": "kinesalud.cl",
+  "facebook": "",
+  "linkedin": "",
+  "resenas": [
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Los kinesiólogos excelentes"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "La clínica limpia y puntual"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Muy buen centro médico"
+   }
+  ],
+  "notas": "",
+  "busqueda": "demo"
+ },
+ {
+  "id": "demo-07",
+  "origen": "Google Maps",
+  "nombre": "Pizzería Forno Rosso",
+  "categoria": "Pizzería",
+  "categorias": [
+   "Pizzería"
+  ],
+  "direccion": "Irarrázaval 2300, 7750000 Ñuñoa, Región Metropolitana, Chile",
+  "ciudad": "",
+  "telefono": "+56 9 0000 1222",
+  "web": "https://fornorosso.cl.ejemplo.cl",
+  "maps": "",
+  "rating": 4.4,
+  "cant_resenas": 640,
+  "emails": [],
+  "instagram": "fornorosso.cl",
+  "facebook": "",
+  "linkedin": "",
+  "resenas": [
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Pizza al horno de barro, el equipo de cocina un siete"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Mozos amables"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Salón grande para cumpleaños"
+   }
+  ],
+  "notas": "",
+  "busqueda": "demo"
+ },
+ {
+  "id": "demo-08",
+  "origen": "Google Maps",
+  "nombre": "Gimnasio Fuerza Total",
+  "categoria": "Gimnasio",
+  "categorias": [
+   "Gimnasio"
+  ],
+  "direccion": "Gran Avenida 5600, 8900000 San Miguel, Región Metropolitana, Chile",
+  "ciudad": "",
+  "telefono": "+56 9 0000 1259",
+  "web": "",
+  "maps": "",
+  "rating": 4.2,
+  "cant_resenas": 98,
+  "emails": [],
+  "instagram": "",
+  "facebook": "",
+  "linkedin": "",
+  "resenas": [
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Buen gimnasio de barrio"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Entrenador muy buena onda"
+   }
+  ],
+  "notas": "",
+  "busqueda": "demo"
+ },
+ {
+  "id": "demo-09",
+  "origen": "Google Maps",
+  "nombre": "Clínica Veterinaria Patitas",
+  "categoria": "Veterinaria",
+  "categorias": [
+   "Veterinaria"
+  ],
+  "direccion": "Vicuña Mackenna 3400, 7820000 Macul, Región Metropolitana, Chile",
+  "ciudad": "",
+  "telefono": "+56 9 0000 1296",
+  "web": "https://patitasvet.ejemplo.cl",
+  "maps": "",
+  "rating": 4.9,
+  "cant_resenas": 310,
+  "emails": [
+   "contacto@patitas.ejemplo.cl"
+  ],
+  "instagram": "patitasvet",
+  "facebook": "",
+  "linkedin": "",
+  "resenas": [
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Los veterinarios un amor con mi perro"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "La clínica atiende de urgencia"
+   }
+  ],
+  "notas": "",
+  "busqueda": "demo"
+ },
+ {
+  "id": "demo-10",
+  "origen": "Google Maps",
+  "nombre": "Sushi Nikko Express",
+  "categoria": "Restaurante japonés",
+  "categorias": [
+   "Restaurante japonés"
+  ],
+  "direccion": "Av. Kennedy 5413, 7560000 Las Condes, Región Metropolitana, Chile",
+  "ciudad": "",
+  "telefono": "+56 9 0000 1333",
+  "web": "",
+  "maps": "",
+  "rating": 3.9,
+  "cant_resenas": 450,
+  "emails": [],
+  "instagram": "",
+  "facebook": "",
+  "linkedin": "",
+  "resenas": [
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Delivery rápido"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Es una cadena, la franquicia de siempre"
+   }
+  ],
+  "notas": "",
+  "busqueda": "demo"
+ },
+ {
+  "id": "demo-11",
+  "origen": "Google Maps",
+  "nombre": "Colegio Particular Los Robles",
+  "categoria": "Colegio",
+  "categorias": [
+   "Colegio"
+  ],
+  "direccion": "Camino El Alba 9800, 7550000 Las Condes, Región Metropolitana, Chile",
+  "ciudad": "",
+  "telefono": "+56 9 0000 1370",
+  "web": "",
+  "maps": "",
+  "rating": 4.4,
+  "cant_resenas": 64,
+  "emails": [
+   "admision@losrobles.ejemplo.cl"
+  ],
+  "instagram": "",
+  "facebook": "",
+  "linkedin": "",
+  "resenas": [
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Buen colegio, profesores comprometidos"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Uniforme del colegio muy cuidado"
+   }
+  ],
+  "notas": "",
+  "busqueda": "demo"
+ },
+ {
+  "id": "demo-12",
+  "origen": "Google Maps",
+  "nombre": "Pastelería Dulce Abril",
+  "categoria": "Pastelería",
+  "categorias": [
+   "Pastelería"
+  ],
+  "direccion": "Av. Valparaíso 800, 2520000 Viña del Mar, Valparaíso, Chile",
+  "ciudad": "",
+  "telefono": "+56 9 0000 1407",
+  "web": "https://dulceabril.ejemplo.cl",
+  "maps": "",
+  "rating": 4.7,
+  "cant_resenas": 520,
+  "emails": [
+   "pedidos@dulceabril.ejemplo.cl"
+  ],
+  "instagram": "dulceabril",
+  "facebook": "",
+  "linkedin": "",
+  "resenas": [
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "Las tortas espectaculares"
+   },
+   {
+    "estrellas": 5,
+    "fecha": "2026-10-01",
+    "texto": "El equipo del local muy atento"
+   }
+  ],
+  "notas": "",
+  "busqueda": "demo"
+ }
+]

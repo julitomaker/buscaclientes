@@ -1,0 +1,84 @@
+# Ejemplo: taller de bordados buscando empresas que necesitan uniformes con logo bordado (Santiago de Chile).
+
+negocio:
+  nombre: Taller de Bordados
+  remitente: Pedro
+  firma: "Pedro\nTaller de Bordados · tallerdebordados.cl"
+  presentacion: bordamos el logo en uniformes, poleras y delantales, desde 12 unidades y con muestra antes de producir
+  presentacion_corta: bordamos logos en uniformes desde 12 unidades
+  motivo: los uniformes de su equipo
+  prueba_social: bordamos para N empresas de Santiago   # EJEMPLO: poné tu número real antes de usarlo
+  beneficio_extra: el primer bordado de prueba va sin costo
+
+busqueda:
+  terminos: [restaurante, clínica dental, gimnasio, colegio particular]
+  zonas: ["Providencia, Santiago, Chile", "Las Condes, Santiago, Chile"]
+  por_busqueda: 12
+  resenas: 10
+
+filtro:
+  categorias_no: [franquicia]
+
+segmentos:
+  - id: gastronomia
+    palabras: [restaurante, "bar(es)?\\b", "caf[eé]", cocina, "garz[oó]n", mozo, delantal, "pizzer", "salón"]
+    minimo: 1
+    peso: 5
+    gancho: Vi que tienen un equipo grande atendiendo en salón
+    asunto: Delantales con su logo
+    muestra_detalle: un delantal bordado con su logo
+  - id: salud
+    palabras: [dental, "cl[ií]nica", "m[eé]dic", kinesi, ambo]
+    minimo: 1
+    peso: 5
+    gancho: Vi su clínica y el equipo que atiende
+    asunto: Ambos bordados
+    muestra_detalle: un ambo bordado con su logo
+  - id: educacion
+    palabras: [colegio, escuela, "jard[ií]n infantil", uniforme escolar]
+    minimo: 1
+    peso: 5
+    gancho: Vi el colegio y lo cuidado que tienen el uniforme
+    asunto: Uniformes con su insignia
+    muestra_detalle: un polerón bordado con la insignia
+  - id: deporte
+    palabras: [gimnasio, gym, crossfit, entrenador, box]
+    minimo: 1
+    peso: 4
+    gancho: Vi su gimnasio y los entrenadores
+    asunto: Poleras para su staff
+    muestra_detalle: una polera bordada con su logo
+
+segmento_general:
+  id: general
+  gancho: Vi su negocio en Google Maps
+  asunto: Uniformes con su logo
+  muestra_detalle: una prenda bordada con su logo
+
+penalizaciones:
+  - palabras: [franquicia, cadena]
+    puntos: 25
+    motivo: parece franquicia o cadena (no decide en el local)
+
+ofrecimiento:
+  zonas_visita: [providencia, "las condes", santiago, "[ñn]u[ñn]oa", vitacura]
+  evaluar: ver una muestra
+  visita:
+    cta: Le interesaría que le lleve {muestra} para que la vea, sin compromiso?
+    cta_dm: Le parece si paso un día con {muestra}?
+    oferta: paso y le dejo {muestra}
+    pedido: quería llevarle {muestra} para que la vea. Me dirían un día y horario para pasar 10 minutos?
+    cierre_verbo: paso con la muestra
+  remoto:
+    cta: Le interesaría que le mande una foto de cómo quedaría su logo bordado, sin compromiso?
+    cta_dm: Me pasa el logo y le mando cómo quedaría?
+    oferta: le mando una simulación con su logo
+    pedido: quería mandarle una simulación de su logo bordado. A qué mail se la envío?
+    cierre_verbo: se la mando
+
+ia:
+  cliente_ideal: negocios independientes con 5 o más empleados que usan uniforme y deciden compras en el local
+  tono: cercano y directo, chileno neutro, sin frases de folleto
+
+personas:
+  titulos: false

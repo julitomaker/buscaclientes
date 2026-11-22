@@ -1,0 +1,27 @@
+name: prueba
+on: [push, pull_request]
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: ./instalar.sh
+      - run: ./clientes demo
+      - name: La planilla de la demo tiene 12 leads y ningún mensaje con variables sin completar
+        run: |
+          python3 - <<'PY'
+          import csv, re, sys
+          r = list(csv.DictReader(open("proyectos/demo/salidas/demo.csv", encoding="utf-8-sig")))
+          assert len(r) == 12, len(r)
+          malas = [f["Nombre"] for f in r for v in f.values() if re.search(r"\{[a-z_]+\}", v or "")]
+          assert not malas, malas
+          print("ok", len(r), "leads")
+          PY
+      - name: Los perfiles de ejemplo cargan
+        run: for p in perfiles/*.yaml; do PYTHONPATH=.:lib .venv/bin/python -c "from buscaclientes import perfil; from pathlib import Path; perfil.cargar(Path('$p'))" && echo "ok $p"; done

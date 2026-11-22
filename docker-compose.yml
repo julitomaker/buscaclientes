@@ -1,0 +1,13 @@
+# Uso:
+#   docker compose run --rm clientes nuevo mi-negocio
+#   docker compose run --rm clientes buscar mi-negocio
+#   docker compose run --rm clientes planilla mi-negocio
+# Las planillas quedan en ./proyectos/<proyecto>/salidas/
+services:
+  clientes:
+    build: .
+    env_file: .env
+    volumes:
+      - ./proyectos:/datos
+    stdin_open: true
+    tty: true

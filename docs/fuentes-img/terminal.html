@@ -1,0 +1,25 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+body{width:1280px;height:560px;background:#e9e4da;padding:40px 60px}
+.win{background:#17141f;border-radius:12px;overflow:hidden;box-shadow:0 14px 40px rgba(23,20,31,.3);height:480px}
+.top{height:38px;background:#231f2d;display:flex;align-items:center;padding:0 14px;gap:8px}
+.top i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.top span{margin-left:auto;margin-right:auto;color:#8b8496;font-size:13px;font-family:Menlo,monospace}
+pre{font-family:Menlo,monospace;font-size:15.5px;line-height:1.62;color:#e7e1ef;padding:20px 24px;white-space:pre-wrap}
+.pr{color:#ff8a63}.c{color:#7d7590}.ok{color:#5be39b}.y{color:#f4c430}
+</style>
+<div class="win"><div class="top"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span>buscaclientes — zsh</span></div>
+<pre><span class="pr">$</span> ./clientes demo
+Demo: 12 negocios ficticios de Santiago, perfil de un taller de bordados.
+<span class="ok">12 leads (7 prioridad alta)</span> → proyectos/demo/salidas/demo.xlsx (+ .csv)
+
+<span class="pr">$</span> ./clientes nuevo mi-negocio --desde plantilla
+Listo: proyectos/mi-negocio/perfil.yaml
+
+<span class="pr">$</span> ./clientes buscar mi-negocio
+4 búsquedas (4 nuevas, 0 en caché) · hasta 12 lugares cada una
+Apify: usado USD 0.00 de 5.00 este mes
+<span class="y">Costo estimado: hasta USD 0.96. Seguimos? [s/N]</span> s
+  · «restaurante» en Palermo, Buenos Aires, Argentina
+  · ...
+<span class="ok">43 leads nuevos · 43 en total.</span> <span class="c">Seguí con: clientes planilla mi-negocio</span></pre></div>

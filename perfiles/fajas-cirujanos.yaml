@@ -1,0 +1,89 @@
+# Ejemplo: una tienda de fajas post-operatorias buscando cirujanos plásticos en Argentina.
+# Basado en un caso real (138 consultorios de 8 ciudades por USD 2,75 de Apify), con los datos de la marca cambiados.
+# Ojo: en Argentina la Ley 17.132 prohíbe al médico cobrar por derivar pacientes. Por eso la oferta es para
+# la paciente (código de descuento) y muestras para evaluar, nunca comisiones.
+
+negocio:
+  nombre: Mi Tienda de Fajas
+  remitente: Laura
+  firma: "Laura\nMi Tienda de Fajas · mitiendadefajas.com.ar"
+  presentacion: fajas colombianas de etapa 1 y 2, con envío a todo el país y asesoramiento de talle por WhatsApp para cada paciente
+  presentacion_corta: trabajamos fajas colombianas post-op
+  motivo: las fajas que usan sus pacientes después
+  prueba_social: ya acompañamos a N clientas de todo el país, muchas en su post-op   # poné tu número real
+  beneficio_extra: para las suyas armamos un código de descuento para que no tengan que salir a buscar la faja a último momento
+
+busqueda:
+  terminos: [cirujano plástico, lipoescultura]
+  zonas:
+    - Ciudad Autónoma de Buenos Aires, Argentina
+    - San Isidro, Buenos Aires, Argentina
+    - Córdoba, Argentina
+    - Rosario, Santa Fe, Argentina
+    - Mendoza, Argentina
+    - La Plata, Buenos Aires, Argentina
+    - Mar del Plata, Argentina
+    - San Miguel de Tucumán, Argentina
+  por_busqueda: 12
+  resenas: 15
+
+filtro:
+  categorias_si: [cirug, cirujan, plástic, plastic]
+  categorias_no: [dermatol, depila, spa, odontol]
+  excluir: []   # clientes actuales o ya contactados: usuario de Instagram o parte del nombre
+
+segmentos:
+  - id: lipotransferencia
+    palabras: [lipotransfer, lipofilling, "transferencia (de grasa|gl[uú]tea)", bbl, "gl[uú]teo"]
+    minimo: 2
+    peso: 12
+    gancho: Vi que hace muchas lipotransferencias
+    asunto: Fajas para lipotransferencia
+    muestra_detalle: la faja media pierna (la que más piden para transferencia glútea) y una de etapa 1
+  - id: lipo
+    palabras: ["lipo(escultura|succi[oó]n|hd)?\\b", liposucc, vaser, renuvion, contorno corporal, abdomin, dermolipectom, mommy]
+    minimo: 1
+    peso: 6
+    gancho: Vi que hace muchas lipos y abdominoplastias
+    asunto: Fajas etapa 1 y 2
+    muestra_detalle: una faja de etapa 1 y una de alta compresión con su tabla abdominal
+  - id: mamas
+    palabras: [mama, lolas, implante, "pr[oó]tesis", busto, mastop]
+    minimo: 1
+    peso: 3
+    gancho: Vi que hace muchas cirugías mamarias
+    asunto: Brasier posoperatorio
+    muestra_detalle: el brasier posoperatorio y una faja para cuando combinan con lipo
+
+segmento_general:
+  id: general
+  gancho: Vi que hace cirugía corporal
+  asunto: Fajas posoperatorias
+  muestra_detalle: una faja de etapa 1 y una de etapa 2
+
+penalizaciones:
+  - palabras: ["rino(plast|modela)?", nariz, blefaro, lifting, "p[aá]rpado", facial]
+    minimo: 6
+    puntos: 20
+    motivo: mayormente facial
+
+ofrecimiento:
+  zonas_visita: [caba, "aut[oó]noma", "capital federal", "san isidro", "vicente l", olivos, tigre, nordelta, pilar,
+                 "san miguel", haedo, "mor[oó]n", quilmes, avellaneda, "lan[uú]s", lomas, canning, "la plata", "city bell"]
+  evaluar: evaluar las fajas
+  visita:
+    cta: Le interesaría que le acerque dos muestras para que las evalúe con su equipo, sin compromiso?
+    cta_dm: Me gustaría dejarle dos muestras para que las evalúe, sin compromiso. Le parece si coordino con su secretaria un día que le quede cómodo?
+    oferta: paso 10 minutos por el consultorio y le dejo {muestra}
+    pedido: quería dejarle dos muestras para que las evalúe con el equipo. Me dirían un día y horario en que pueda pasar 10 minutos?
+    cierre_verbo: se las acerco
+  remoto:
+    cta: Le interesaría que le mande por correo dos muestras para que las evalúe con su equipo, sin compromiso?
+    cta_dm: Me gustaría mandarle dos muestras para que las evalúe, sin compromiso. Me pasa una dirección del consultorio y se las mando?
+    oferta: le mando por correo {muestra}, sin cargo
+    pedido: quería mandarle dos muestras sin cargo para que las evalúe. A qué dirección y a nombre de quién las envío?
+    cierre_verbo: se las mando
+
+ia:
+  cliente_ideal: cirujanos plásticos que operan cuerpo (lipo, lipotransferencia, abdominoplastia, mamas) y cuyas pacientes usan faja después
+  tono: cálido y profesional, como una vendedora argentina que conoce el rubro, sin frases de folleto

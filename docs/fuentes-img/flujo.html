@@ -1,0 +1,40 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+body{width:1280px;height:600px;background:var(--cream);padding:52px 64px}
+h2{font-size:30px;letter-spacing:-.02em}
+.sub{color:var(--mute);font-size:17px;margin-top:6px}
+.row{display:flex;align-items:stretch;gap:0;margin-top:34px}
+.box{flex:1;background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:20px 20px 18px}
+.num{font-size:13px;font-weight:700;color:var(--acc);letter-spacing:.1em}
+.t{font-size:21px;font-weight:700;margin-top:6px}
+.d{font-size:14.5px;color:#4f485c;margin-top:10px;line-height:1.45}
+.k{display:inline-block;font-family:Menlo,monospace;font-size:12.5px;background:var(--ink);color:var(--cream);padding:3px 8px;border-radius:6px;margin-top:12px}
+.arr{width:44px;display:flex;align-items:center;justify-content:center;color:var(--acc);font-size:28px}
+.seq{margin-top:34px;background:var(--ink);border-radius:16px;padding:20px 26px;color:var(--cream)}
+.seq h3{font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc2)}
+.days{display:flex;margin-top:14px;position:relative}
+.days:before{content:"";position:absolute;left:12px;right:12px;top:11px;height:2px;background:#4a4357}
+.day{flex:1;position:relative;padding-top:30px;font-size:14px;color:#ddd6e6}
+.day:before{content:"";position:absolute;left:4px;top:3px;width:18px;height:18px;border-radius:50%;background:var(--acc);border:3px solid var(--ink)}
+.day b{display:block;color:#fff;font-size:15px;margin-bottom:3px}
+</style>
+<h2>Cómo funciona</h2>
+<div class="sub">Un perfil por negocio. La herramienta busca, puntúa y escribe. Vos revisás y mandás.</div>
+<div class="row">
+  <div class="box"><div class="num">01 · PERFIL</div><div class="t">Qué vendés y a quién</div><div class="d">Rubro, zonas, tipos de cliente con sus palabras clave, qué ofrecés para empezar y quién firma.</div><span class="k">perfil.yaml</span></div>
+  <div class="arr">→</div>
+  <div class="box"><div class="num">02 · GOOGLE MAPS</div><div class="t">Busca los negocios</div><div class="d">Vía Apify: ficha, teléfono, web, rating, reseñas, mail e Instagram. Lo ya buscado no se vuelve a cobrar.</div><span class="k">clientes buscar</span></div>
+  <div class="arr">→</div>
+  <div class="box"><div class="num">03 · PUNTAJE</div><div class="t">Lee y prioriza</div><div class="d">Segmento y puntaje 0–100 por palabras clave. Con Claude: descarta lo que no sirve y escribe una apertura personal.</div><span class="k">IA opcional</span></div>
+  <div class="arr">→</div>
+  <div class="box"><div class="num">04 · PLANILLA</div><div class="t">Mensajes listos</div><div class="d">Excel + CSV ordenado por puntaje, con visita o envío según la zona y 5 mensajes por lead.</div><span class="k">clientes planilla</span></div>
+</div>
+<div class="seq"><h3>La secuencia que arma para cada lead · 3 semanas y se frena</h3>
+  <div class="days">
+    <div class="day"><b>Día 1</b>Mail de ~60 palabras</div>
+    <div class="day"><b>Día 2</b>Seguir y like en IG</div>
+    <div class="day"><b>Día 4</b>Seguimiento en el hilo</div>
+    <div class="day"><b>Día 7</b>DM de Instagram</div>
+    <div class="day"><b>Día 11</b>Llamado o WhatsApp al equipo</div>
+    <div class="day"><b>Día 18</b>Cierre amable</div>
+  </div></div>

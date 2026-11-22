@@ -1,0 +1,105 @@
+# Perfil de un negocio para buscaclientes.
+# Completá lo de arriba (negocio, busqueda) y ya podés correr. Lo demás mejora el puntaje y los mensajes.
+# Las plantillas de mensajes usan {variables}: ver la lista al final.
+
+negocio:
+  nombre: Mi Negocio
+  remitente: Ana                 # quién firma
+  firma: "Ana\nMi Negocio · minegocio.com"
+  # Una línea: qué vendés y por qué le conviene. Va en el primer mail después de "Soy Ana, de Mi Negocio:"
+  presentacion: hacemos X para Y, con entrega en todo el país
+  presentacion_corta: hacemos X para Y     # para el DM
+  # Completa "...y le escribo por ___"
+  motivo: el X que usan en su negocio
+  # Un dato REAL y comprobable. Va en el seguimiento.
+  prueba_social: ya trabajamos con más de 50 negocios de la zona
+  beneficio_extra: ""                      # opcional, se suma a la prueba social con ", y ..."
+
+busqueda:
+  # Lo que escribirías en Google Maps. 2 o 3 términos suelen alcanzar.
+  terminos:
+    - restaurante
+  zonas:
+    - Palermo, Buenos Aires, Argentina
+  por_busqueda: 12    # lugares por término y zona (Google Maps devuelve hasta ~120)
+  resenas: 15         # reseñas a leer por lugar (sirven para el segmento y para la IA)
+  idioma: es
+  contactos: true     # busca emails y redes en la web de cada lugar
+
+filtro:
+  # Partes de texto (regex) de la categoría o el nombre en Google Maps. Vacío = acepta todo.
+  categorias_si: []
+  categorias_no: []   # ej: ["franquicia", "cadena"]
+
+# Segmentos: tipos de cliente dentro del rubro. El orden es la prioridad: gana el primero que llega a "minimo".
+# Cada uno cambia el gancho, el asunto y lo que se ofrece. Si ninguno matchea, se usa segmento_general.
+segmentos:
+  - id: grande
+    palabras: [eventos, salón, catering]   # se buscan al inicio de palabra en nombre, categoría, web y reseñas.
+                                            # Si una lleva corchetes o barras ("caf[eé]", "bar\\b"), ponela entre comillas
+    minimo: 2
+    peso: 6                                  # puntos por cada mención (tope 40 en total)
+    gancho: Vi que hacen muchos eventos
+    asunto: Propuesta para eventos           # 2 o 3 palabras, sin signos
+    muestra_detalle: una muestra para eventos
+
+segmento_general:
+  id: general
+  gancho: Vi su local en Google Maps
+  asunto: Propuesta para su local
+  muestra_detalle: una muestra
+
+penalizaciones: []
+#  - palabras: [franquicia]
+#    puntos: 20
+#    motivo: es franquicia
+
+personas:
+  titulos: true    # saluda "Dr. Pérez" / "Lic. Gómez" si el título aparece en el nombre del lugar
+
+ofrecimiento:
+  # Si la localidad del lead matchea alguna, se le ofrece visita; si no, modo remoto.
+  zonas_visita: [palermo, "buenos aires", caba]
+  evaluar: verlo
+  visita:
+    cta: Le interesaría que pase 10 minutos y le deje {muestra}, sin compromiso?
+    cta_dm: Le parece si coordino con su equipo un día que le quede cómodo?
+    oferta: paso 10 minutos y le dejo {muestra}
+    pedido: quería dejarle {muestra} para que la evalúen. Me dirían un día y horario en que pueda pasar 10 minutos?
+    cierre_verbo: se la acerco
+  remoto:
+    cta: Le interesaría que le mande {muestra} para que la evalúe, sin compromiso?
+    cta_dm: Me pasa una dirección y se la mando?
+    oferta: le mando {muestra}, sin cargo
+    pedido: quería mandarle {muestra} sin cargo. A qué dirección y a nombre de quién la envío?
+    cierre_verbo: se la mando
+
+ia:
+  usar: auto            # auto = solo si hay ANTHROPIC_API_KEY en .env
+  modelo: claude-opus-5-5
+  maximo: 60            # leads con mejor puntaje que analiza por corrida
+  cliente_ideal: restaurantes independientes con salón propio que deciden sus compras en el local
+  tono: cálido y profesional, tipo WhatsApp argentino, sin frases de folleto
+
+planilla:
+  prioridad_alta: 70
+  prioridad_media: 50
+  minimo: 10
+  por_semana: 15
+
+# mensajes:   # descomentá para reescribir alguna plantilla. Variables disponibles:
+#  {saludo} "Dr. Pérez, buen día." o "Hola, buen día."   {saludo_dm} "Hola Dr. Pérez, como está?"
+#  {trato_o_hola} "Dr. Pérez" o "Hola"   {al_contacto} "al Dr. Pérez" / "al equipo de La Parrilla"
+#  {gancho} {motivo} {presentacion} {presentacion_corta} {prueba_social} {beneficio_extra}
+#  {cta} {cta_dm} {oferta} {pedido} {cierre_verbo} {evaluar} {muestra} {asunto}
+#  {negocio} {remitente} {firma} {lead} {ciudad} {canales}
+#  email1: |
+#    {saludo}
+#
+#    {gancho} y le escribo por {motivo}.
+#
+#    Soy {remitente}, de {negocio}: {presentacion}.
+#
+#    {cta}
+#
+#    {firma}
